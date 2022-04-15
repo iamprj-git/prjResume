@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'core/CSS/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/CSS/bootstrap.css' %}">
+    {% block corecss %}
+    <link rel="stylesheet" href="{% static 'core/CSS/custom.css'%}">
+    {% endblock corecss %}
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-sm-2">  
+                {% include 'core/sidebar.html' %}
+            <div class="col-sm-10">
+                  {% block content %}{% endblock content %}
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/proper.js' %}"></script>
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.js' %}"></script>
+    
+    
+    
+</body>
+</html>

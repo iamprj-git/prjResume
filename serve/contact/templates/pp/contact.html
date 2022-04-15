@@ -1,0 +1,97 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(41, 39, 39);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 500px;
+            margin: 15vh auto;
+            padding: 15px;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 0 15px rgb(180, 51, 73);
+            /* background-color: gray; */
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+        }
+        
+        input {
+            width: 100%;
+            margin: 5px 0;
+            height: 35px;
+            font-size: 17px;
+            text-align: center;
+            outline: none;
+            border-radius: 15px;
+            border: none;
+            background: rgb(235, 228, 228);
+        }
+        
+        textarea {
+            width: 100%;
+            margin: 5px 0;
+            font-size: 17px;
+            text-align: center;
+            outline: none;
+            border-radius: 15px;
+            border: none;
+            background: rgb(235, 228, 228);
+        }
+        input[type=submit]{
+            margin: 10px auto;
+            width: 120px;
+            background: rgb(216, 31, 62);
+            color: red;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+        background: tomato;
+        }
+        @media screen and (max-width:600px) {
+            .container{
+                width: 90%;
+            }
+        }
+    </style>
+    <h1 class="text-white">Contact Us</h1>
+    <hr>
+    <h2 class="text-white">Have any questions? We'd love to hear from you</h2>
+    <div class="contact-items">
+        <div class="customer-care">
+            <h3 class="text-white">Customer Care</h3>
+            <p class= "text-white">Our Support team is spread all over the world to give you fast response</p>
+            <button id="cust-care"> Submit a Request</button>
+            <a href="#" class="text-white"> Frequently asked Questions</a>
+        </div>
+        <div class="write-us text-white" >
+            <h3>Write Us</h3>
+            <p> You can write us if you have any queries</p>
+           <a href="#"> <button id="write">Write</button></a>
+      <!-- <a href="./contact-form.html"> <button id="write">Write</button></a>  u-->
+        </div>
+        <div class="sales-market text-white">
+            <h3 class="text-wite"> Sales and Marketing</h3>
+            <p class="text-white">Get in touch with our sales and marketing team</p>
+            <button id="sales" color:"red">Contact Sales</button>
+            <a href="#" class="text-white">View Plans</a>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

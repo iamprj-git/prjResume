@@ -1,0 +1,18 @@
+{% load static %}
+<div class="main">
+    <div class='text-center'>
+        <img src="{% static 'core/images/mxy.png'%}" alt="profile pic" class="img-fluid rounded-circle mt-5" width="100px" height="100px" padding-top="5px">
+    </div>
+    <div class="kk">
+        <h3>Prajwal Siwakoti</h3>
+    </div>
+    <hr>
+    <nav class="nav flex-column text-center">
+        <a href="{% url 'home' %}" class="nav-link {{home}}" >Home</a>
+        <a href="{% url 'edu' %}" class="nav-link {{qualif}}">Qualification</a>
+        <a href="{% url 'services' %}" class="nav-link">services</a>
+        <a href="{% url 'contact' %}" class="nav-link">contact</a>
+    </nav>
+</div>
+
+</div>
